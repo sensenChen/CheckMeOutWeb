@@ -14,21 +14,18 @@
         echo "did connect";
     }
 
-    $lockid = $_POST['LockID'];
+    $itemid = $_POST['ItemID'];
     $itemname = $_POST['ItemName'];
     $itemdescription = $_POST['ItemDescription'];
     $itemcost = $_POST['ItemCost'];
     $itemlink = $_POST['ItemLink'];
 
-    $sql = "INSERT INTO INVENTORY(LockID, Name, Description, Price, Link) VALUES($lockid, $itemname, $itemdescription,$itemcost,$itemlink)";
-    $result = mysql_query($sql);
-
-    if(!$result){
-
-        die("did not work");
+    $sql = "INSERT INTO INVENTORY(ItemID, Name, Description, Price, Link) VALUES($itemid, $itemname, $itemdescription,$itemcost, $itemlink)";
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    echo "did work";
 
 
     $conn->close();
