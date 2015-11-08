@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "CREATE TABLE Items";
+$sql = "CREATE TABLE SOMETHING";
 if ($conn->query($sql) === TRUE) {
     echo "Database created successfully";
 } else {
