@@ -12,7 +12,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "CREATE TABLE SOMETHING;";
+$sql = "CREATE TABLE Persons
+(
+PersonID int,
+LastName varchar(255),
+FirstName varchar(255),
+Address varchar(255),
+City varchar(255)
+)";
 if ($conn->query($sql) === TRUE){
     echo "Database created successfully";
 } else {
