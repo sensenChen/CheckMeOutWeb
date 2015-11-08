@@ -14,10 +14,10 @@
         echo "did connect";
     }
 
-    $LockID = $_POST['LockID'];
-    $ItemID = $_POST['ItemID'];
+    $lockid = $_POST['LockID'];
+    $itemid = $_POST['ItemID'];
 
-    $sql = "INSERT INTO Inventory (LockID, ItemID) VALUES (100,300)";
+    $sql = "INSERT INTO Inventory (LockID, ItemID) VALUES ($lockid, $itemid)";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
