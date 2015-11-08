@@ -20,7 +20,7 @@
     $itemcost = $_POST['ItemCost'];
     $itemlink = $_POST['ItemLink'];
 
-    $sql = "INSERT INTO INVENTORY(ItemID, Name, Description, Price, Link) VALUES($itemid, $itemname, $itemdescription,$itemcost, $itemlink)";
+    $sql = "INSERT INTO INVENTORY(ItemID, Price, Name, Description,  Link) VALUES($itemid, $itemcost, $itemname, $itemdescription, $itemlink)";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
