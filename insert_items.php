@@ -14,13 +14,13 @@
         echo "did connect";
     }
 
-    $LockID = $_POST['LockID'];
-    $ItemName = $_POST['ItemName'];
-    $ItemDescription = $_POST['ItemDescription'];
-    $ItemCost = $_POST['ItemCost'];
-    $ItemLink = $_POST['ItemLink'];
+    $lockid = $_POST['LockID'];
+    $itemname = $_POST['ItemName'];
+    $itemdescription = $_POST['ItemDescription'];
+    $itemcost = $_POST['ItemCost'];
+    $itemlink = $_POST['ItemLink'];
 
-    $sql = "INSERT INTO INVENTORY(LockID, Name, Description, Price, Link) VALUES($LockID, $ItemName, $ItemDescription,$ItemCost,$ItemLink)";
+    $sql = "INSERT INTO INVENTORY(LockID, Name, Description, Price, Link) VALUES($lockid, $itemname, $itemdescription,$itemcost,$itemlink)";
     $result = mysql_query($sql);
 
     if(!$result){
