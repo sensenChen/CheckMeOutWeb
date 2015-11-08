@@ -14,10 +14,10 @@
 		} 
 
 		//$d = $_POST('LockID');
-		$sql = "DELETE FROM Inventory WHERE Inventory.LockID=100";
+		$sql = "DELETE FROM Inventory WHERE Inventory.LockID==100";
 		//$sql2 = "INSERT INTO Unlocked (Lock_ID) VALUES ($d)";
 
-		if ($conn->query($sql) === TRUE) {
+		if (mysqli_query($conn, $sql)) {
 		    echo "Record deleted successfully";
 		} else {
 		    echo "Error deleting record: " . $conn->error;
