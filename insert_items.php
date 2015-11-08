@@ -20,7 +20,7 @@
     $itemdescription = $_POST["ItemDescription"];
     $itemlink = $_POST["ItemLink"];
 
-    $sql = "INSERT INTO Items (ItemID, Price, Name, Description, Link) VALUES($itemid, $itemcost, $itemname, $itemdescription, $itemlink)";
+    $sql = "INSERT INTO Items (ItemID, Price, Name, Description, Link) VALUES($itemid, $itemcost, '$itemname', '$itemdescription', '$itemlink')";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
