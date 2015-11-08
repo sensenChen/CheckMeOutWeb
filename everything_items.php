@@ -12,12 +12,12 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM Inventory";
+$sql = "SELECT * FROM Items";
 $result = $conn->query($sql);
 
 $rows = array();
 while($r = mysqli_fetch_assoc($result)) {
-    print $r['LockID'].','.$r['ItemID']."<br>";
+    print $r['ItemID'].','.$r['Price'].','.$r['Name'].','.$r['Description'].','.$r['Link']"<br>";
 }
 
 $conn->close();
