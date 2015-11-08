@@ -12,10 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "CREATE TABLE Unlocked
-(
-LockID int NOT NULL PRIMARY KEY,
-)";
+$sql = "CREATE TABLE Unlocked( LockID int NOT NULL PRIMARY KEY)";
 if ($conn->query($sql) === TRUE){
     echo "Database created successfully";
 } else {
