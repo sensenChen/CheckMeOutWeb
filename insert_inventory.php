@@ -17,7 +17,7 @@
     $LockID = $_POST['LockID'];
     $ItemID = $_POST['ItemID'];
 
-    $sql = "INSERT INTO Items(LockID, ItemID) VALUES($LockID, $ItemID)";
+    $sql = "INSERT INTO Inventory (LockID, ItemID) VALUES (100,300)";
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
     } else {
