@@ -12,13 +12,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "CREATE TABLE Persons
+$sql = "CREATE TABLE Inventory
 (
-PersonID int,
-LastName varchar(255),
-FirstName varchar(255),
-Address varchar(255),
-City varchar(255)
+LockID int NOT NULL PRIMARY KEY,
+ItemID int NOT NULL
 )";
 if ($conn->query($sql) === TRUE){
     echo "Database created successfully";
