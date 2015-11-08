@@ -18,7 +18,7 @@
     $ItemID = $_POST['ItemID'];
 
     $sql = "INSERT INTO Items(LockID, ItemID) VALUES($LockID, $ItemID)";
-    $result = mysql_query($sql);
+    $result = $conn->query($sql);
 
     if(!$result){
 
