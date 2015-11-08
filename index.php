@@ -17,9 +17,13 @@
 
 
 
-    $sql1 = "CREATE TABLE Inventory (LockID int,ItemID int);";
-    $sql2 = "CREATE TABLE Items (ItemID int, StoreID int, ItemName varchar(50), ItemDescription varchar(50), ItemPrice float, PictureLink varchar(50));";
+    $sql1 = "CREATE TABLE Inventory (LockID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        ItemID INT UNSIGNED NOT NULL)";
 
+
+    $sql2 = "CREATE TABLE Inventory (LockID INT UNSIGNED AUTO_INCREMENT PRIMARY KEY, StoreID INT UNSIGNED NOT NULL
+        ItemName VARCHAR(30) NOT NULL, ItemDescription VARCHAR(50) NOT NULL, ItemPrice FLOAT NOT NULL,
+        PictureLink VARCHAR(30) NOT NULL)";
 
     $result = mysql_query($sql1);
 
