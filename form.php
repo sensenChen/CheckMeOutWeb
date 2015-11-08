@@ -1,5 +1,5 @@
 <html>
-    <form action="input_inventory.php" method="POST">
+    <form action="insert_inventory.php" method="POST">
         <em>Inventory-Lock Form</em>
         Lock ID: <input type="number" value="LockID">
         Item ID: <input type="number" value="ItemID">
@@ -7,7 +7,7 @@
     </form>
 
 
-    <form action="input_items.php" method="POST">
+    <form action="insert_items.php" method="POST">
         <em>Item Input Form</em>
         Lock ID: <input type="number" value="LockID">
         Store ID: <input type="number" value="StoreID">
