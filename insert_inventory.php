@@ -18,15 +18,11 @@
     $ItemID = $_POST['ItemID'];
 
     $sql = "INSERT INTO Items(LockID, ItemID) VALUES($LockID, $ItemID)";
-    $result = $conn->query($sql);
-
-    if(!$result){
-
-        die("did not work");
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
-    echo "did work";
-
 
     $conn->close();
 ?>
