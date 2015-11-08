@@ -10,8 +10,6 @@
     <form action="insert_items.php" method="POST">
         <em>Item Input Form</em>
         Lock ID: <input type="number" value="LockID">
-        Store ID: <input type="number" value="StoreID">
-
         Item Name: <input type="text" value="ItemName">
         Item Description: <input type="text" value="ItemDescription">
         Item Cost: <input type="number" value="ItemCost">
