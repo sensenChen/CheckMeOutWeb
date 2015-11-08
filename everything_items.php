@@ -15,9 +15,8 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM Items";
 $result = $conn->query($sql);
 
-$rows = array();
 while($r = mysqli_fetch_assoc($result)) {
-    print $r['ItemID'].','.$r['Price'].','.$r['Name'].','.$r['Description'].','.$r['Link']"<br>";
+    print $r['ItemID'].','.$r['Price'].','.$r['Name'].','.$r['Description'].','.$r['Link']."<br>";
 }
 
 $conn->close();
