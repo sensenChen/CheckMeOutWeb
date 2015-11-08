@@ -13,9 +13,9 @@
 		    die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$d = $_POST('LockID');
-		$sql = "DELETE FROM Inventory WHERE Lock_ID=$d";
-		//$sql2 = "INSERT INTO Unlocked (LockID) VALUES ($d)";
+		//$d = $_POST('LockID');
+		$sql = "DELETE FROM Inventory WHERE Lock_ID=100";
+		//$sql2 = "INSERT INTO Unlocked (Lock_ID) VALUES ($d)";
 
 		if ($conn->query($sql) === TRUE) {
 		    echo "Record deleted successfully";
