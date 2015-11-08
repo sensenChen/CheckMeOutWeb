@@ -1,5 +1,5 @@
 <?php
-    $link = mysql_connect('localhost', 'CheckMeOutHacks', 'YHack2015');
+    $link = mysql_connect('checkmeout.azurewebsites.net', 'CheckMeOutHacks', 'YHack2015');
     if (!$link) {
         die('Could not connect: ' . mysql_error());
     }
