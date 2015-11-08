@@ -13,11 +13,11 @@
 		    die("Connection failed: " . $conn->connect_error);
 		} 
 
-		//$d = $_POST('LockID');
-		$sql = "DELETE FROM Inventory WHERE Inventory.LockID==100";
+		$d = $_POST('LockID');
+		$sql = 'DELETE FROM Inventory WHERE LockID=100';
 		//$sql2 = "INSERT INTO Unlocked (Lock_ID) VALUES ($d)";
 
-		if (mysqli_query($conn, $sql)) {
+		if ($conn->query($sql) === TRUE) {
 		    echo "Record deleted successfully";
 		} else {
 		    echo "Error deleting record: " . $conn->error;
