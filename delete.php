@@ -14,7 +14,7 @@
 		} 
 
 		$d = $_POST('LockID');
-		$sql = "DELETE FROM Inventory WHERE LockID = '$d'";
+		$sql = "DELETE FROM Inventory WHERE LockID = $d";
 		//$sql2 = "INSERT INTO Unlocked (Lock_ID) VALUES ($d)";
 
 		if ($conn->query($sql) === TRUE) {
