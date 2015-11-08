@@ -16,9 +16,9 @@
 
     $itemid = $_POST['ItemID'];
     $itemcost = $_POST['ItemCost'];
-    $itemname = $_POST['ItemName'];
-    $itemdescription = $_POST['ItemDescription'];
-    $itemlink = $_POST['ItemLink'];
+    $itemname = $_POST["ItemName"];
+    $itemdescription = $_POST["ItemDescription"];
+    $itemlink = $_POST["ItemLink"];
 
     $sql = "INSERT INTO Items (ItemID, Price, Name, Description, Link) VALUES($itemid, $itemcost, $itemname, $itemdescription, $itemlink)";
     if ($conn->query($sql) === TRUE) {
@@ -26,7 +26,6 @@
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }
-
 
     $conn->close();
 ?>
