@@ -6,3 +6,8 @@
     echo 'Connected successfully';
     mysql_close($link);
 ?>
+
+
+<html>
+    <p>Hello</p>
+</html>
