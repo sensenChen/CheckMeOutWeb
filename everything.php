@@ -15,6 +15,12 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM Inventory";
 $result = $conn->query($sql);
 
+$rows = array();
+while($r = mysqli_fetch_assoc($result)) {
+    $rows[] = $r;
+}
+print json_encode($rows);
+
 $conn->close();
 ?>
 </html>
