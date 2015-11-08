@@ -15,9 +15,12 @@
     }
 
     $LockID = $_POST['LockID'];
-    $ItemID = $_POST['ItemID'];
+    $ItemName = $_POST['ItemName'];
+    $ItemDescription = $_POST['ItemDescription'];
+    $ItemCost = $_POST['ItemCost'];
+    $ItemLink = $_POST['ItemLink'];
 
-    $sql = "INSERT INTO Items(LockID, ItemID) VALUES($LockID, $ItemID)";
+    $sql = "INSERT INTO INVENTORY(LockID, Name, Description, Price, Link) VALUES($LockID, $ItemName, $ItemDescription,$ItemCost,$ItemLink)";
     $result = mysql_query($sql);
 
     if(!$result){
