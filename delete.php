@@ -13,7 +13,7 @@
 		    die("Connection failed: " . $conn->connect_error);
 		} 
 
-		$d = $_POST("LockID");
+		$d = $_POST('LockID');
 		$sql = "DELETE FROM "Inventory" WHERE LockID = $d;";
 		//$sql2 = "INSERT INTO Unlocked (Lock_ID) VALUES ($d)";
 
