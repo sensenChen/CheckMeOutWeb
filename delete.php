@@ -15,8 +15,9 @@
 
 		$d = $_POST('Lock_ID');
 		$sql = "DELETE FROM Inventory WHERE Lock_ID=$d";
+		$sql2 = "INSERT INTO Unlocked (LockID) VALUES ($d)";
 
-		if ($conn->query($sql) === TRUE) {
+		if ($conn->query($sql) === TRUE && $conn2->query($sql2)) {
 		    echo "Record deleted successfully";
 		} else {
 		    echo "Error deleting record: " . $conn->error;
